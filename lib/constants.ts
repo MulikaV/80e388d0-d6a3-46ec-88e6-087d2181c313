@@ -1,76 +1,89 @@
-export const SITE_CONFIG = {
-  name: 'Developer Portfolio',
-  description: 'Personal portfolio website showcasing my work and experience',
-  url: 'https://portfolio.dev',
-  ogImage: '/images/og-image.jpg',
-  links: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    twitter: 'https://twitter.com'
-  }
-}
-
-export const NAV_ITEMS = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Contact', path: '/#contact' }
-]
-
-export const TECH_STACK = [
-  { name: 'React', icon: 'react' },
-  { name: 'Next.js', icon: 'nextjs' },
-  { name: 'TypeScript', icon: 'typescript' },
-  { name: 'Node.js', icon: 'nodejs' },
-  { name: 'Python', icon: 'python' },
-  { name: 'JavaScript', icon: 'javascript' }
-]
-
-export const SKILLS = [
-  { name: 'Frontend Development', level: 90 },
-  { name: 'Backend Development', level: 85 },
-  { name: 'UI/UX Design', level: 75 },
-  { name: 'DevOps', level: 70 }
-]
-
-export const EXPERIENCE = [
+export const techStack = [
   {
-    title: 'Senior Developer',
-    company: 'Tech Corp',
-    period: '2020 - Present',
-    description: 'Lead developer for enterprise applications'
+    name: 'React',
+    icon: '/images/tech/react.svg',
+    level: 90
   },
   {
-    title: 'Full Stack Developer',
-    company: 'StartUp Inc',
-    period: '2018 - 2020',
-    description: 'Developed and maintained web applications'
+    name: 'TypeScript',
+    icon: '/images/tech/typescript.svg',
+    level: 85
+  },
+  {
+    name: 'Next.js',
+    icon: '/images/tech/nextjs.svg',
+    level: 80
+  },
+  {
+    name: 'Node.js',
+    icon: '/images/tech/nodejs.svg',
+    level: 75
+  },
+  {
+    name: 'TailwindCSS',
+    icon: '/images/tech/tailwind.svg',
+    level: 90
   }
-]
+];
 
-export const PROJECTS = [
+export const experiences = [
+  {
+    title: 'Senior Frontend Developer',
+    company: 'Tech Company',
+    period: '2021 - Present',
+    description: 'Leading frontend development team, implementing new features and maintaining existing codebase.'
+  },
+  {
+    title: 'Frontend Developer',
+    company: 'Digital Agency',
+    period: '2019 - 2021',
+    description: 'Developed responsive web applications using React and TypeScript.'
+  },
+  {
+    title: 'Junior Developer',
+    company: 'Startup',
+    period: '2018 - 2019',
+    description: 'Started career as a junior developer working on various web projects.'
+  }
+];
+
+export const projects = [
   {
     title: 'E-commerce Platform',
-    description: 'Modern e-commerce solution built with Next.js',
+    description: 'Modern e-commerce solution built with Next.js and TypeScript',
     image: '/images/projects/ecommerce.jpg',
-    tags: ['Next.js', 'React', 'Node.js'],
-    github: 'https://github.com',
-    demo: 'https://demo.com'
+    technologies: ['Next.js', 'TypeScript', 'TailwindCSS'],
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://example.com'
   },
   {
     title: 'Task Management App',
-    description: 'Project management tool with real-time updates',
+    description: 'Collaborative task management application',
     image: '/images/projects/task-app.jpg',
-    tags: ['React', 'Firebase', 'Material-UI'],
-    github: 'https://github.com',
-    demo: 'https://demo.com'
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://example.com'
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'Personal portfolio website built with modern technologies',
+    image: '/images/projects/portfolio.jpg',
+    technologies: ['Next.js', 'TailwindCSS', 'TypeScript'],
+    githubUrl: 'https://github.com',
+    liveUrl: 'https://example.com'
   }
-]
+];
 
-export const CONTACT_FORM = {
-  fields: [
-    { name: 'name', label: 'Full Name', type: 'text', required: true },
-    { name: 'email', label: 'Email Address', type: 'email', required: true },
-    { name: 'message', label: 'Message', type: 'textarea', required: true }
-  ]
-}
+export const socialLinks = {
+  github: 'https://github.com',
+  linkedin: 'https://linkedin.com',
+  twitter: 'https://twitter.com',
+  email: 'contact@example.com'
+};
+
+export const navigation = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Contact', href: '#contact' }
+];
