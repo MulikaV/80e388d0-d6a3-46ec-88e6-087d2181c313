@@ -1,7 +1,5 @@
 "use client";
 
-'use client';
-
 import { Container } from "@/components/ui/container";
 import { TechFilter } from "@/components/portfolio/tech-filter";
 import { ProjectGrid } from "@/components/portfolio/project-grid";
