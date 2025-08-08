@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from 'react';
+import React from 'react';
 
-const TechFilter = ({ onFilterChange }) => {
-  const [activeFilter, setActiveFilter] = useState('all');
+interface TechFilterProps {
+  onFilterChange: (filter: string) => void;
+}
 
+const TechFilter: React.FC<TechFilterProps> = ({ onFilterChange }) => {
   const technologies = [
     'All',
     'React',
@@ -12,26 +14,16 @@ const TechFilter = ({ onFilterChange }) => {
     'TypeScript',
     'Node.js',
     'Python',
-    'JavaScript'
+    'JavaScript',
   ];
 
-  const handleFilterClick = (tech: string) => {
-    const filter = tech.toLowerCase();
-    setActiveFilter(filter);
-    onFilterChange(filter);
-  };
-
   return (
-    <div className="flex flex-wrap gap-3 mb-8">
+    <div className="flex flex-wrap gap-2">
       {technologies.map((tech) => (
         <button
           key={tech}
-          onClick={() => handleFilterClick(tech)}
-          className={`px-4 py-2 rounded-full text-sm transition-all
-            ${activeFilter === tech.toLowerCase()
-              ? 'bg-primary text-white'
-              : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
-            }`}
+          onClick={() => onFilterChange(tech)}
+          className="px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800 transition-colors"
         >
           {tech}
         </button>
