@@ -1,89 +1,74 @@
 export const techStack = [
-  {
-    name: 'React',
-    icon: '/images/tech/react.svg',
-    level: 90
-  },
-  {
-    name: 'TypeScript',
-    icon: '/images/tech/typescript.svg',
-    level: 85
-  },
-  {
-    name: 'Next.js',
-    icon: '/images/tech/nextjs.svg',
-    level: 80
-  },
-  {
-    name: 'Node.js',
-    icon: '/images/tech/nodejs.svg',
-    level: 75
-  },
-  {
-    name: 'TailwindCSS',
-    icon: '/images/tech/tailwind.svg',
-    level: 90
-  }
+  'React',
+  'Next.js',
+  'TypeScript',
+  'JavaScript',
+  'Node.js',
+  'TailwindCSS',
+  'SCSS',
+  'PostgreSQL',
+  'MongoDB',
+  'GraphQL'
 ];
 
-export const experiences = [
+export const skills = [
+  { name: 'Frontend Development', progress: 90 },
+  { name: 'Backend Development', progress: 85 },
+  { name: 'UI/UX Design', progress: 75 },
+  { name: 'DevOps', progress: 70 },
+  { name: 'Project Management', progress: 80 }
+];
+
+export const experience = [
   {
     title: 'Senior Frontend Developer',
     company: 'Tech Company',
     period: '2021 - Present',
-    description: 'Leading frontend development team, implementing new features and maintaining existing codebase.'
+    description: 'Leading frontend development team, implementing modern web solutions.'
   },
   {
-    title: 'Frontend Developer',
+    title: 'Full Stack Developer',
     company: 'Digital Agency',
     period: '2019 - 2021',
-    description: 'Developed responsive web applications using React and TypeScript.'
+    description: 'Developed and maintained multiple client projects using various technologies.'
   },
   {
     title: 'Junior Developer',
     company: 'Startup',
     period: '2018 - 2019',
-    description: 'Started career as a junior developer working on various web projects.'
+    description: 'Started career working on innovative web applications.'
   }
 ];
 
 export const projects = [
   {
     title: 'E-commerce Platform',
-    description: 'Modern e-commerce solution built with Next.js and TypeScript',
-    image: '/images/projects/ecommerce.jpg',
-    technologies: ['Next.js', 'TypeScript', 'TailwindCSS'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com'
+    description: 'Modern e-commerce solution with advanced features',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    image: '/images/project1.jpg',
+    github: 'https://github.com',
+    live: 'https://example.com'
   },
   {
     title: 'Task Management App',
-    description: 'Collaborative task management application',
-    image: '/images/projects/task-app.jpg',
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com'
+    description: 'Collaborative task management platform',
+    technologies: ['Next.js', 'TypeScript', 'PostgreSQL'],
+    image: '/images/project2.jpg',
+    github: 'https://github.com',
+    live: 'https://example.com'
   },
   {
     title: 'Portfolio Website',
-    description: 'Personal portfolio website built with modern technologies',
-    image: '/images/projects/portfolio.jpg',
-    technologies: ['Next.js', 'TailwindCSS', 'TypeScript'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com'
+    description: 'Personal portfolio website with blog',
+    technologies: ['React', 'TailwindCSS', 'SCSS'],
+    image: '/images/project3.jpg',
+    github: 'https://github.com',
+    live: 'https://example.com'
   }
 ];
 
 export const socialLinks = {
   github: 'https://github.com',
   linkedin: 'https://linkedin.com',
-  twitter: 'https://twitter.com',
-  email: 'contact@example.com'
+  twitter: 'https://twitter.com'
 };
-
-export const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Contact', href: '#contact' }
-];
