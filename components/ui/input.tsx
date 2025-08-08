@@ -5,43 +5,37 @@ import React from 'react';
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
-  id: string;
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, id, type = 'text', className = '', ...props }, ref) => {
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ label, error, className = '', ...props }, ref) => {
     return (
-      <div className="form-control w-full">
+      <div className="w-full">
         {label && (
-          <label htmlFor={id} className="block text-sm font-medium mb-2">
+          <label className="block text-sm font-medium mb-1">
             {label}
           </label>
         )}
         <input
-          id={id}
-          type={type}
           ref={ref}
           className={`
             w-full
             px-4
             py-2
-            rounded-md
             border
-            border-gray-300
+            rounded-md
             focus:outline-none
             focus:ring-2
             focus:ring-blue-500
-            focus:border-transparent
-            transition
-            ${error ? 'border-red-500' : ''}
+            ${error ? 'border-red-500' : 'border-gray-300'}
             ${className}
           `}
           {...props}
         />
         {error && (
-          <span className="text-red-500 text-sm mt-1">
+          <p className="mt-1 text-sm text-red-500">
             {error}
-          </span>
+          </p>
         )}
       </div>
     );
@@ -49,5 +43,3 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 );
 
 Input.displayName = 'Input';
-
-export default Input;
