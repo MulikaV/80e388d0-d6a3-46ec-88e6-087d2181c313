@@ -1,5 +1,5 @@
 interface TechFilterProps {
-  onFilterChange: (selectedTech: string) => void;
+  onFilterChange: (tech: string) => void;
 }
 
 interface ProjectCardProps {
@@ -7,8 +7,8 @@ interface ProjectCardProps {
   description: string;
   image: string;
   technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
+  liveLink?: string;
+  githubLink?: string;
 }
 
 interface Project {
@@ -17,13 +17,14 @@ interface Project {
   description: string;
   image: string;
   technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
+  liveLink?: string;
+  githubLink?: string;
 }
 
 interface TimelineItemProps {
   date: string;
   title: string;
+  company: string;
   description: string;
 }
 
