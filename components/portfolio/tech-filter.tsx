@@ -1,39 +1,38 @@
 "use client";
 
-import { useState } from 'react';
+import { techStack } from "@/lib/constants";
 
-interface TechFilterProps {
-  onFilterChange: (filter: string) => void;
+export interface TechFilterProps {
+  onFilterChange: (tech: string) => void;
+  selectedTech: string;
 }
 
-const TechFilter = ({ onFilterChange }: TechFilterProps) => {
-  const [activeFilter, setActiveFilter] = useState('all');
-
-  const filters = ['all', 'react', 'next.js', 'typescript', 'node.js'];
-
-  const handleFilterClick = (filter: string) => {
-    setActiveFilter(filter);
-    onFilterChange(filter);
-  };
-
+export const TechFilter = ({ onFilterChange, selectedTech }: TechFilterProps) => {
   return (
-    <div className="flex flex-wrap gap-4">
-      {filters.map((filter) => (
+    <div className="flex flex-wrap gap-3">
+      <button
+        onClick={() => onFilterChange("all")}
+        className={`px-4 py-2 rounded-full ${
+          selectedTech === "all"
+            ? "bg-blue-500 text-white"
+            : "bg-gray-200 hover:bg-gray-300"
+        }`}
+      >
+        All
+      </button>
+      {techStack.map((tech) => (
         <button
-          key={filter}
-          onClick={() => handleFilterClick(filter)}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors
-            ${
-              activeFilter === filter
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300'
-            }`}
+          key={tech}
+          onClick={() => onFilterChange(tech)}
+          className={`px-4 py-2 rounded-full ${
+            selectedTech === tech
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200 hover:bg-gray-300"
+          }`}
         >
-          {filter.charAt(0).toUpperCase() + filter.slice(1)}
+          {tech}
         </button>
       ))}
     </div>
   );
 };
-
-export default TechFilter;
